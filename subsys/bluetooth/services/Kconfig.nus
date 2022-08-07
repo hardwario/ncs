@@ -11,6 +11,11 @@ config BT_NUS
 	  Enable Nordic UART service.
 if BT_NUS
 
+config BT_NUS_AUTHEN
+	bool "Enable authentication for Nordic UART service"
+	help
+	  Enforces authenticated access to Nordic UART service.
+
 module = BT_NUS
 module-str = NUS
 source "${ZEPHYR_BASE}/subsys/logging/Kconfig.template.log_config"
